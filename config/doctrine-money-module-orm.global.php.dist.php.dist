@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'doctrine' => [
+        'driver' => [
+            'orm_default' => [
+                'drivers' => [
+                    'Money\Money' => 'money_driver'
+                ],
+            ],
+        ],
+        'connection' => [
+            'orm_default' => [
+                'doctrine_type_mappings' => [
+                    'currency' => 'currency',
+                ],
+            ],
+        ],
+        'configuration' => [
+            'orm_default' => [
+                'types' => [
+                    'currency' => 'DoctrineMoneyModule\DBAL\Types\CurrencyType',
+                ],
+            ],
+        ],
+    ],
+];

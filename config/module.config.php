@@ -12,29 +12,10 @@ return [
     'doctrine' => [
         'driver' => [
             'money_driver' => [
-                'class' => 'Doctrine\ORM\Mapping\Driver\PHPDriver',
+                'class' => 'Doctrine\Common\Persistence\Mapping\Driver\PHPDriver',
                 'paths' => [
-                    __DIR__ . '/../mapping/PHPDriver/mongodb-odm'
+                    __DIR__ . '/../mapping/PHPDriver'
                 ]
-            ],
-            'orm_default' => [
-                'drivers' => [
-                    'Money\Money' => 'money_driver'
-                ],
-            ],
-        ],
-        'connection' => [
-            'orm_default' => [
-                'doctrine_type_mappings' => [
-                    'currency' => 'currency',
-                ],
-            ],
-        ],
-        'configuration' => [
-            'orm_default' => [
-                'types' => [
-                    'currency' => 'DoctrineMoneyModule\DBAL\Types\CurrencyType',
-                ],
             ],
         ],
     ],

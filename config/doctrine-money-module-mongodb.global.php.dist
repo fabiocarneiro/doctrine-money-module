@@ -1,0 +1,13 @@
+<?php
+
+return [
+    'doctrine' => [
+        'driver' => [
+            'odm_default' => [
+                'drivers' => [
+                    'Money\Money' => 'money_driver'
+                ]
+            ]
+        ],
+    ],
+];
